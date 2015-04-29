@@ -9,10 +9,6 @@
 
 #import "MondeOpenTransition.h"
 
-
-#define SCALE_FACTOR 0.5f
-
-
 static inline void PrintViewHierachy(UIView * view, UIView * fromView, UIView* toView){
     
     NSString * frameName = @"Unknown View";
@@ -87,8 +83,6 @@ static inline void PrintViewHierachy(UIView * view, UIView * fromView, UIView* t
     [container addSubview:toVC.view];
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-
-        fromVC.view.transform = CGAffineTransformMakeScale(SCALE_FACTOR, SCALE_FACTOR);
         toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
     } completion:^(BOOL finished){
         

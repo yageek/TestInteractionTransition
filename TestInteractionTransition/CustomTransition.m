@@ -19,7 +19,7 @@
     if(self = [super initWithCoder:aDecoder])
     {
     
-        self.modalPresentationStyle = UIModalPresentationNone;
+        self.modalPresentationStyle = UIModalPresentationPopover;
         NSLog(@"Modal Presentation Style of:%@", NSStringFromClass(self.class));
         self.transitioningDelegate = self;
     }
