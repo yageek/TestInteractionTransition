@@ -19,7 +19,7 @@
     if(self = [super initWithCoder:aDecoder])
     {
     
-        self.modalPresentationStyle = UIModalPresentationPopover;
+        self.modalPresentationStyle = UIModalPresentationCustom;
         NSLog(@"Modal Presentation Style of:%@", NSStringFromClass(self.class));
         self.transitioningDelegate = self;
     }
@@ -42,10 +42,10 @@
 {
     return [[MondeOpenTransition alloc] init];
 }
-//- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-//{
-//    return [[MondeCloseTransition alloc] init];
-//}
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [[MondeCloseTransition alloc] init];
+}
 //- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator
 //{
 //    return _closeTransition;

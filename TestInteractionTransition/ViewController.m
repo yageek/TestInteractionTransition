@@ -17,7 +17,7 @@
 {
     if(self = [super initWithCoder:aDecoder])
     {
-        self.modalPresentationStyle = UIModalPresentationFullScreen;
+        self.modalPresentationStyle = UIModalPresentationNone;
     }
     return self;
 }

@@ -79,8 +79,10 @@ static inline void PrintViewHierachy(UIView * view, UIView * fromView, UIView* t
     CGFloat height = CGRectGetHeight(toVC.view.bounds);
     toVCFrame.origin.y = height;
     toVC.view.frame = toVCFrame;
-    
+
+
     [container addSubview:toVC.view];
+   
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
